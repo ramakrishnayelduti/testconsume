@@ -1,0 +1,17 @@
+name: testtest
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+  sonartest:
+    uses: ramakrishnayelduti/testaction/.github/workflows/blank.yml@main
+    needs: build
+    with:
+      dirpath: ${{ github.workspace }}
+      repocheckout: ${{ github.repository }}
