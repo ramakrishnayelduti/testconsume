@@ -13,5 +13,5 @@ jobs:
     uses: ramakrishnayelduti/testaction/.github/workflows/blank.yml@main
     needs: build
     with:
-      dirpath: "./testfolder1"
+      dirpath: "${{ github.workspace }}/testfolder1"
       repocheckout: ${{ github.repository }}
