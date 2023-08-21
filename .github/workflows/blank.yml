@@ -1,6 +1,11 @@
 name: testtest
 on:
   workflow_dispatch:
+    inputs:
+      urname:
+        description: tell me your name
+        required: true
+        default: "nothing"
   push:
     branches:
       - main
