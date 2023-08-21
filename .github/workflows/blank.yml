@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
   sonartest:
-    uses: ramakrishnayelduti/testaction/.github/workflows/blank.yml@main
+    uses: ramakrishnayelduti/testaction/.github/workflows/blank.yml@feat/test
     needs: build
     with:
       dirpath: testfolder1
